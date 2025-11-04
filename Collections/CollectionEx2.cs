@@ -5,6 +5,17 @@ using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 
+/* 
+ 2- Crie um programa em C# que sirva para pesquisar um array de valores inteiros. Para fazer isso, siga estas
+etapas a seguir
+b- Exiba os nomes da segunda e da penúltima fruta no console
+a-) Solicite via teclado o número de valores do array (deve ser um número inteiro)
+b-) Declare e inicialize um array de inteiros com a quantidade de números inteiros informados
+c-) Solicite ao usuário um valor de um número inteiro a procurar no array
+d-) Exiba se o número informado existe no array de inteiros ou não
+e-) Repita até que o texto ‘fim’ seja inserido via teclado
+
+*/
 namespace ExercicioColecoes.Collections
 {
     public static class CollectionEx2
