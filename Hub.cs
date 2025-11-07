@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExercicioColecoes.Collections;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,7 +38,8 @@ namespace ExercicioColecoes
         {
             Console.WriteLine("Escolha qual exercicio das Collections deseja ver: ");
             Console.WriteLine("1 - Array Frutas - Modificando Array e imprimindo de maneiras diferentes");
-            Console.WriteLine("2 - Not implemented");
+            Console.WriteLine("2 - Pesquisa no Array");
+            Console.WriteLine("3 - List<T>");
             Console.WriteLine("0 - Leave");
             switch (Console.ReadLine())
             {
@@ -53,6 +55,13 @@ namespace ExercicioColecoes
                     Collections.CollectionEx2.SearchInArray();
                     break;
 
+                case "3":
+                    List<Student> resultStudents = ExercicioListT.ViewAndAvarage();
+                    foreach (var s in resultStudents)
+                    {
+                        Console.WriteLine($"Student: {s.Name} - Grade: {s.Grade}");
+                    }
+                    break;
 
             }
         }
