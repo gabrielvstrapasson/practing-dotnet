@@ -66,6 +66,7 @@ namespace ExercicioColecoes.Collections
 
         public static void PrintInformationsAboutStudent()
         {
+            Console.WriteLine("-------------------------------------");
             List<Student> resultStudents = ViewAndAvarage();
             foreach (var s in resultStudents)
             {
@@ -75,7 +76,7 @@ namespace ExercicioColecoes.Collections
 
             resultStudents.Add(new Student { Name = "Bia", Grade = 7.75 });
             resultStudents.Add(new Student { Name = "Mario", Grade = 8.95 });
-
+            Console.WriteLine("-------------------------------------");
             Console.WriteLine("\nAfter adding two new students:\n");
 
             foreach (var s in resultStudents)
@@ -85,7 +86,7 @@ namespace ExercicioColecoes.Collections
 
 
             var findItem = resultStudents.Find(resultStudents => resultStudents.Name == "Amanda");
-
+            Console.WriteLine("-------------------------------------");
             if (findItem == null)
                 Console.WriteLine("Student not found.");
 
@@ -99,15 +100,23 @@ namespace ExercicioColecoes.Collections
             }
 
 
-            resultStudents.Sort((s1, s2) => string.Compare(s1.Name, s2.Name)); 
-
+            resultStudents.Sort((s1, s2) => string.Compare(s1.Name, s2.Name));
+            Console.WriteLine("-------------------------------------");
             Console.WriteLine("Order students");
             
             foreach (var s in resultStudents)
             {
                 Console.WriteLine($"Student: {s.Name} - Grade: {s.Grade}");
             }
+            Console.WriteLine("-------------------------------------");
+            Console.WriteLine("Students with grade higher than 8: ");
 
+            var highGrades = resultStudents.Where(s => s.Grade > 8);
+
+            foreach (var s in highGrades)
+            {
+                Console.WriteLine($"Student: {s.Name} - Grade: {s.Grade}");
+            }
         }
         public static List<Student> ViewAndAvarage()
         {
