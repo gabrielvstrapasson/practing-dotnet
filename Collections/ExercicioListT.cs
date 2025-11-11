@@ -58,19 +58,80 @@ namespace ExercicioColecoes.Collections
         }
 
     }
-    
+
     public class ExercicioListT
     {
+
+        
+
+        public static void PrintInformationsAboutStudent()
+        {
+            List<Student> resultStudents = ViewAndAvarage();
+            foreach (var s in resultStudents)
+            {
+                Console.WriteLine($"Student: {s.Name} - Grade: {s.Grade}");
+            }
+            AvarageGrade(ViewAndAvarage());
+
+            resultStudents.Add(new Student { Name = "Bia", Grade = 7.75 });
+            resultStudents.Add(new Student { Name = "Mario", Grade = 8.95 });
+
+            Console.WriteLine("\nAfter adding two new students:\n");
+
+            foreach (var s in resultStudents)
+            {
+                Console.WriteLine($"Student: {s.Name} - Grade: {s.Grade}");
+            }
+
+
+            var findItem = resultStudents.Find(resultStudents => resultStudents.Name == "Amanda");
+
+            if (findItem == null)
+                Console.WriteLine("Student not found.");
+
+            resultStudents.Remove(findItem);
+
+            Console.WriteLine("\nAfter removing Amanda:\n");
+
+            foreach (var s in resultStudents)
+            {
+                Console.WriteLine($"Student: {s.Name} - Grade: {s.Grade}");
+            }
+
+
+            resultStudents.Sort((s1, s2) => string.Compare(s1.Name, s2.Name)); 
+
+            Console.WriteLine("Order students");
+            
+            foreach (var s in resultStudents)
+            {
+                Console.WriteLine($"Student: {s.Name} - Grade: {s.Grade}");
+            }
+
+        }
         public static List<Student> ViewAndAvarage()
         {
 
             List<Student> result = DataStudents.ListTExercise();
-            //foreach (var s in student)
-            //{
-            //    Console.WriteLine(s.Name + " - " + s.Grade);
-            //}
             return result;
         }
+
+        public static double AvarageGrade(List<Student> students)
+        {
+            double sum = 0;
+
+            foreach (var s in students)
+            {
+                sum += s.Grade;
+            }
+
+            var avarage = sum / students.Count;
+
+            Console.WriteLine($"The average grade of the class is: {avarage:N2}");
+
+            return avarage;
+        }
+
     }
 
 }

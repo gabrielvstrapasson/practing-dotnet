@@ -55,14 +55,17 @@ namespace ExercicioColecoes
                     Collections.CollectionEx2.SearchInArray();
                     break;
 
-                case "3":
-                    List<Student> resultStudents = ExercicioListT.ViewAndAvarage();
-                    foreach (var s in resultStudents)
-                    {
-                        Console.WriteLine($"Student: {s.Name} - Grade: {s.Grade}");
-                    }
-                    break;
+                //case "3":
+                //    List<Student> resultStudents = ExercicioListT.ViewAndAvarage();
+                //    foreach (var s in resultStudents)
+                //    {
+                //        Console.WriteLine($"Student: {s.Name} - Grade: {s.Grade}");
+                //    }
+                //    break;
 
+                case "3":
+                    ExercicioListT.PrintInformationsAboutStudent();
+                    break;
             }
         }
 
