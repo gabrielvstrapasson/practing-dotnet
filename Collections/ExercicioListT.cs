@@ -62,7 +62,7 @@ namespace ExercicioColecoes.Collections
     public class ExercicioListT
     {
 
-        
+
 
         public static void PrintInformationsAboutStudent()
         {
@@ -103,7 +103,7 @@ namespace ExercicioColecoes.Collections
             resultStudents.Sort((s1, s2) => string.Compare(s1.Name, s2.Name));
             Console.WriteLine("-------------------------------------");
             Console.WriteLine("Order students");
-            
+
             foreach (var s in resultStudents)
             {
                 Console.WriteLine($"Student: {s.Name} - Grade: {s.Grade}");
