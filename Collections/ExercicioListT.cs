@@ -67,12 +67,12 @@ namespace ExercicioColecoes.Collections
         public static void PrintInformationsAboutStudent()
         {
             Console.WriteLine("-------------------------------------");
-            List<Student> resultStudents = ViewAndAvarage();
+            List<Student> resultStudents = ViewAndAverage();
             foreach (var s in resultStudents)
             {
                 Console.WriteLine($"Student: {s.Name} - Grade: {s.Grade}");
             }
-            AvarageGrade(ViewAndAvarage());
+            AverageGrade(ViewAndAverage());
 
             resultStudents.Add(new Student { Name = "Bia", Grade = 7.75 });
             resultStudents.Add(new Student { Name = "Mario", Grade = 8.95 });
@@ -118,14 +118,14 @@ namespace ExercicioColecoes.Collections
                 Console.WriteLine($"Student: {s.Name} - Grade: {s.Grade}");
             }
         }
-        public static List<Student> ViewAndAvarage()
+        public static List<Student> ViewAndAverage()
         {
 
             List<Student> result = DataStudents.ListTExercise();
             return result;
         }
 
-        public static double AvarageGrade(List<Student> students)
+        public static double AverageGrade(List<Student> students)
         {
             double sum = 0;
 
@@ -134,11 +134,11 @@ namespace ExercicioColecoes.Collections
                 sum += s.Grade;
             }
 
-            var avarage = sum / students.Count;
+            var Average = sum / students.Count;
 
-            Console.WriteLine($"The average grade of the class is: {avarage:N2}");
+            Console.WriteLine($"The average grade of the class is: {Average:N2}");
 
-            return avarage;
+            return Average;
         }
 
     }

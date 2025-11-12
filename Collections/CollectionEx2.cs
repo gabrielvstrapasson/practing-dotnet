@@ -1,13 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.Marshalling;
 using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 
 /* 
- 
-
+2- Crie um programa em C# que sirva para pesquisar um array de valores inteiros. Para fazer isso, siga estas
+etapas a seguir
+a-) Solicite via teclado o número de valores do array (deve ser um número inteiro)
+b-) Declare e inicialize um array de inteiros com a quantidade de números inteiros informados
+c-) Solicite ao usuário um valor de um número inteiro a procurar no array
+d-) Exiba se o número informado existe no array de inteiros ou não
+e-) Repita até que o texto ‘fim’ seja inserido via teclado
 */
 namespace ExercicioColecoes.Collections
 {
@@ -17,16 +23,17 @@ namespace ExercicioColecoes.Collections
         {
 
             int maxNumberInArray = 0, numberToSearch = 0;
+            string userContinue = "";
 
             Console.WriteLine("Informe a quantidade de números que deseja inserir no array: ");
             maxNumberInArray = int.Parse(Console.ReadLine()!);
 
-            int[] numbersArray = [maxNumberInArray];
+            int[] numbersArray = new int[maxNumberInArray];
 
             for (int i = 0; i < numbersArray.Length; i++)
             {
                 Console.WriteLine("Digite o valor a ser inserido no array [INT]: ");
-                numbersArray.Append(int.Parse(Console.ReadLine()!));
+                numbersArray[i] = int.Parse(Console.ReadLine()!);
             }
 
             Console.WriteLine("Informe qual número deseja verificar se existe no array: ");
@@ -40,6 +47,18 @@ namespace ExercicioColecoes.Collections
             {
                 Console.WriteLine("O valor não existe no array.");
             }
+
+            do
+            {
+                Console.WriteLine("Digite 'fim' para encerrar, ou qualquer tecla para continuar");
+                userContinue = Console.ReadLine()!;
+                if (userContinue != "fim")
+                {
+                    SearchInArray();
+                }
+            } while (userContinue != "fim");
+
+            
         }
     }
 }

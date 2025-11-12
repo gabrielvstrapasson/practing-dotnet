@@ -48,24 +48,21 @@ namespace ExercicioColecoes
                     break;
 
                 case "1":
-                    Collections.CollectionEx1.OperationsInArray();
+                    ExercicioListT.PrintInformationsAboutStudent();
                     break;
 
                 case "2":
+                    Collections.CollectionEx1.OperationsInArray();
+                    break;
+
+                case "3":
                     Collections.CollectionEx2.SearchInArray();
                     break;
 
-                //case "3":
-                //    List<Student> resultStudents = ExercicioListT.ViewAndAvarage();
-                //    foreach (var s in resultStudents)
-                //    {
-                //        Console.WriteLine($"Student: {s.Name} - Grade: {s.Grade}");
-                //    }
-                //    break;
-
-                case "3":
-                    ExercicioListT.PrintInformationsAboutStudent();
+                case "4":
+                    CollectionEx3.AverageInGroups();
                     break;
+
             }
         }
 
