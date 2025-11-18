@@ -15,7 +15,7 @@ namespace ExercicioColecoes
         {
             Console.WriteLine("Selecione a opção que deseja visualizar o exercício: ");
             Console.WriteLine("1 - Collections Exercises");
-            Console.WriteLine("2 - Not implemented");
+            Console.WriteLine("2 - Herança");
             Console.WriteLine("0 - Leave");
 
             switch (Console.ReadLine())
@@ -40,6 +40,7 @@ namespace ExercicioColecoes
             Console.WriteLine("1 - Array Frutas - Modificando Array e imprimindo de maneiras diferentes");
             Console.WriteLine("2 - Pesquisa no Array");
             Console.WriteLine("3 - List<T>");
+            Console.WriteLine("4 - Media em Grupos");
             Console.WriteLine("0 - Leave");
             switch (Console.ReadLine())
             {
