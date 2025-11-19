@@ -1,4 +1,5 @@
 ﻿using ExercicioColecoes.Collections;
+using ExercicioColecoes.Heranca;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,11 @@ namespace ExercicioColecoes
                 case "1":
                     CollectionsHub();
                     break;
+
+                case "2":
+                    HerancaHub();
+                    break;
+
             }
 
 
@@ -63,6 +69,25 @@ namespace ExercicioColecoes
                 case "4":
                     CollectionEx3.AverageInGroups();
                     break;
+
+            }
+        }
+        internal static void HerancaHub()
+        {
+            Console.WriteLine("Escolha qual exercicio de Herança deseja ver: ");
+            Console.WriteLine("1 - BankAccount");
+            Console.WriteLine("2 - Don't implementation");
+            Console.WriteLine("0 - Leave");
+            switch (Console.ReadLine())
+            {
+                case "0":
+                    HubOptions();
+                    break;
+
+                case "1":
+                    BankAccount.ShowInfoAboutFunctionAccounts();
+                    break;
+
 
             }
         }
